@@ -11,11 +11,6 @@ import { LoggedInUserContext } from "../../contexts/LoggedInUserContext";
 import User from "../../models/User";
 import { CurrentPageContext } from "../../contexts/CurrentPageContext";
 
-interface UpperNavbarProps {
-  currentPage: Page;
-  setCurrentPage: (page: Page) => void;
-}
-
 const UpperNavbar = () => {
   const loggedInUserContext = useContext(LoggedInUserContext);
   const currentLoggedInUser: User = loggedInUserContext.user!;

@@ -10,7 +10,6 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Typography from "@mui/material/Typography";
 import PostDTO from "../../models/PostDTO";
 import moment from "moment";
-import { useNavigate } from "react-router-dom";
 import { useContext, useEffect, useRef, useState } from "react";
 import PostsAPI from "../../api/PostsAPI";
 import User from "../../models/User";
@@ -66,7 +65,7 @@ const PostCard = ({
     };
 
     likePost();
-  }, [isLiked]);
+  }, [currentLoggedInUser.name, id, isLiked, likesN]);
 
   const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
@@ -81,7 +80,7 @@ const PostCard = ({
       firstClickTime.current = new Date().getTime();
     }
 
-    if (clickCounter.current == 2 && heartIconEffectRef.current) {
+    if (clickCounter.current === 2 && heartIconEffectRef.current) {
       heartIconEffectRef.current.classList.add("like-heart-effect");
       setLiked(true);
       await delay(1001);

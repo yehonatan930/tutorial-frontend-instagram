@@ -5,9 +5,9 @@ export default class User {
   avatarSrc: string;
   posts: Post[];
 
-  constructor(name: string, avaterSrc: string, posts: Post[]) {
+  constructor(name: string, avatarSrc: string, posts: Post[]) {
     this.name = name;
-    this.avatarSrc = avaterSrc;
+    this.avatarSrc = avatarSrc;
     this.posts = posts;
   }
 }
