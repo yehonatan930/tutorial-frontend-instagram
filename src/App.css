@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.App {
+  background-color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  /* justify-content: center; */
+  /* font-size: calc(10px + 2vmin); */
+}
+
+.pages-container {
+  width: 100%;
+  max-height: calc(100vh - 112px);
+  overflow-y: scroll;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Chrome */
+.pages-container::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+  -webkit-appearance: none;
+}
