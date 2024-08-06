@@ -6,7 +6,7 @@ export default class UsersAPI extends HttpClient {
   private static classInstance?: UsersAPI;
 
   private constructor() {
-    super("users/");
+    super("/users/");
   }
 
   public static getInstance() {

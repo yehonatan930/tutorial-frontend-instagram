@@ -6,7 +6,7 @@ export default class PostsAPI extends HttpClient {
   private static classInstance?: PostsAPI;
 
   private constructor() {
-    super("posts/");
+    super("/posts/");
   }
 
   public static getInstance() {

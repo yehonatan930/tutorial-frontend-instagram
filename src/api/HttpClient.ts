@@ -6,7 +6,7 @@ export default abstract class HttpClient {
 
   public constructor(baseURL: string) {
     this.instance = axios.create({
-      baseURL: `http://localhost:5216/${baseURL}`,
+      baseURL: `${process.env.REACT_APP_SERVER_URL}${baseURL}`,
     });
 
     this.instance.interceptors.response.use(
